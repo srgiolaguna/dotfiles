@@ -1,0 +1,128 @@
+// OMO configuration — todos modelos FREE
+// Instalado con oh-my-opencode (bun install -g oh-my-opencode)
+{
+  "[opencode]": {
+    "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
+    "agents": {
+      "sisyphus-junior": {
+        "model": "opencode/nemotron-3-ultra-free",
+        "fallback": [
+          "google/gemini-3.6-flash",
+          "opencode/nemotron-3.5-lightning-free",
+          "opencode/mimo-v2.5-free"
+        ]
+      },
+      "oracle": {
+        "model": "google/gemini-3.6-flash",
+        "fallback": [
+          "opencode/nemotron-3-ultra-free",
+          "opencode/mimo-v2.5-free"
+        ]
+      },
+      "librarian": {
+        "model": "google/gemini-3.6-flash",
+        "fallback": [
+          "opencode/nemotron-3-ultra-free",
+          "opencode/nemotron-3.5-lightning-free"
+        ]
+      },
+      "explore": {
+        "model": "opencode/ling-3.0-flash-fin-free",
+        "fallback": [
+          "opencode/mimo-v2.5-free"
+        ]
+      },
+      "multimodal-looker": {
+        "model": "google/gemini-3.6-flash",
+        "fallback": [
+          "opencode/nemotron-3.5-lightning-free",
+          "opencode/nemotron-3-ultra-free"
+        ]
+      },
+      "prometheus": {
+        "model": "google/gemini-3.6-flash",
+        "fallback": [
+          "opencode/nemotron-3-ultra-free",
+          "opencode/nemotron-3.5-lightning-free"
+        ]
+      },
+      "metis": {
+        "model": "opencode/mimo-v2.5-free",
+        "fallback": [
+          "opencode/ling-3.0-flash-fin-free",
+          "google/gemini-3.6-flash"
+        ]
+      },
+      "momus": {
+        "model": "opencode/mimo-v2.5-free",
+        "fallback": [
+          "opencode/ling-3.0-flash-fin-free"
+        ]
+      },
+      "atlas": {
+        "model": "opencode/nemotron-3.5-lightning-free",
+        "fallback": [
+          "opencode/nemotron-3-ultra-free",
+          "google/gemini-3.6-flash"
+        ]
+      },
+      "hephaestus": {
+        "model": "opencode/nemotron-3.5-lightning-free",
+        "fallback": [
+          "opencode/nemotron-3-ultra-free",
+          "google/gemini-3.6-flash"
+        ]
+      }
+    },
+    "categories": {
+      "quick": {
+        "model": "opencode/ling-3.0-flash-fin-free"
+      },
+      "deep": {
+        "model": "opencode/nemotron-3-ultra-free",
+        "fallback": [
+          "google/gemini-3.6-flash",
+          "opencode/nemotron-3.5-lightning-free"
+        ]
+      },
+      "visual-engineering": {
+        "model": "google/gemini-3.6-flash",
+        "fallback": [
+          "opencode/nemotron-3-ultra-free"
+        ]
+      },
+      "ultrabrain": {
+        "model": "opencode/nemotron-3-ultra-free",
+        "fallback": [
+          "google/gemini-3.6-flash"
+        ]
+      },
+      "writing": {
+        "model": "opencode/mimo-v2.5-free"
+      },
+      "artistry": {
+        "model": "opencode/nemotron-3.5-lightning-free"
+      },
+      "unspecified-low": {
+        "model": "opencode/ling-3.0-flash-fin-free"
+      },
+      "unspecified-high": {
+        "model": "opencode/nemotron-3-ultra-free",
+        "fallback": [
+          "google/gemini-3.6-flash",
+          "opencode/nemotron-3.5-lightning-free"
+        ]
+      }
+    },
+    "defaultFallback": [
+      "opencode/nemotron-3-ultra-free",
+      "google/gemini-3.6-flash",
+      "opencode/nemotron-3.5-lightning-free",
+      "opencode/mimo-v2.5-free",
+      "opencode/ling-3.0-flash-fin-free"
+    ]
+  },
+  "_migrations": [
+    "2026-08-reasoning-unification"
+  ]
+}
