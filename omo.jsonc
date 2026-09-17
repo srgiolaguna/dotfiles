@@ -1,126 +1,28 @@
-// OMO configuration — todos modelos FREE
-// Instalado con oh-my-opencode (bun install -g oh-my-opencode)
 {
   "[opencode]": {
-    "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
+    "model_fallback": true,
     "agents": {
-      "sisyphus-junior": {
-        "model": "opencode/nemotron-3-ultra-free",
-        "fallback": [
-          "google/gemini-3.6-flash",
-          "opencode/nemotron-3.5-lightning-free",
-          "opencode/mimo-v2.5-free"
-        ]
-      },
-      "oracle": {
-        "model": "google/gemini-3.6-flash",
-        "fallback": [
-          "opencode/nemotron-3-ultra-free",
-          "opencode/mimo-v2.5-free"
-        ]
-      },
-      "librarian": {
-        "model": "google/gemini-3.6-flash",
-        "fallback": [
-          "opencode/nemotron-3-ultra-free",
-          "opencode/nemotron-3.5-lightning-free"
-        ]
-      },
-      "explore": {
-        "model": "opencode/ling-3.0-flash-fin-free",
-        "fallback": [
-          "opencode/mimo-v2.5-free"
-        ]
-      },
-      "multimodal-looker": {
-        "model": "google/gemini-3.6-flash",
-        "fallback": [
-          "opencode/nemotron-3.5-lightning-free",
-          "opencode/nemotron-3-ultra-free"
-        ]
-      },
-      "prometheus": {
-        "model": "google/gemini-3.6-flash",
-        "fallback": [
-          "opencode/nemotron-3-ultra-free",
-          "opencode/nemotron-3.5-lightning-free"
-        ]
-      },
-      "metis": {
-        "model": "opencode/mimo-v2.5-free",
-        "fallback": [
-          "opencode/ling-3.0-flash-fin-free",
-          "google/gemini-3.6-flash"
-        ]
-      },
-      "momus": {
-        "model": "opencode/mimo-v2.5-free",
-        "fallback": [
-          "opencode/ling-3.0-flash-fin-free"
-        ]
-      },
-      "atlas": {
-        "model": "opencode/nemotron-3.5-lightning-free",
-        "fallback": [
-          "opencode/nemotron-3-ultra-free",
-          "google/gemini-3.6-flash"
-        ]
-      },
-      "hephaestus": {
-        "model": "opencode/nemotron-3.5-lightning-free",
-        "fallback": [
-          "opencode/nemotron-3-ultra-free",
-          "google/gemini-3.6-flash"
-        ]
-      }
+      "hephaestus":         { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "fallback_models": ["openrouter/nex-agi/nex-n2.5-mini:free", "openrouter/nvidia/nemotron-3.5-lightning:free"] },
+      "oracle":             { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "fallback_models": ["openrouter/nex-agi/nex-n2.5-pro:free", "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free"] },
+      "librarian":          { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "fallback_models": ["openrouter/inclusionai/ling-3.0-flash-fin:free", "openrouter/nex-agi/nex-n2.5-mini:free"] },
+      "explore":            { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "fallback_models": ["openrouter/nvidia/nemotron-3.5-lightning:free", "openrouter/nex-agi/nex-n2.5-mini:free"] },
+      "multimodal-looker":  { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "fallback_models": ["openrouter/inclusionai/ling-3.0-flash-vl:free"] },
+      "prometheus":         { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "fallback_models": ["openrouter/nex-agi/nex-n2.5-mini:free", "openrouter/inclusionai/ling-3.0-flash-fin:free"] },
+      "metis":              { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "fallback_models": ["openrouter/nvidia/nemotron-3.5-lightning:free", "openrouter/nex-agi/nex-n2.5-mini:free"] },
+      "momus":              { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "fallback_models": ["openrouter/nex-agi/nex-n2.5-pro:free", "openrouter/nex-agi/nex-n2.5-mini:free"] },
+      "atlas":              { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "fallback_models": ["openrouter/nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter/nex-agi/nex-n2.5-mini:free"] },
+      "sisyphus-junior":    { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "fallback_models": ["openrouter/nex-agi/nex-n2.5-mini:free", "openrouter/nvidia/nemotron-3.5-lightning:free"] }
     },
     "categories": {
-      "quick": {
-        "model": "opencode/ling-3.0-flash-fin-free"
-      },
-      "deep": {
-        "model": "opencode/nemotron-3-ultra-free",
-        "fallback": [
-          "google/gemini-3.6-flash",
-          "opencode/nemotron-3.5-lightning-free"
-        ]
-      },
-      "visual-engineering": {
-        "model": "google/gemini-3.6-flash",
-        "fallback": [
-          "opencode/nemotron-3-ultra-free"
-        ]
-      },
-      "ultrabrain": {
-        "model": "opencode/nemotron-3-ultra-free",
-        "fallback": [
-          "google/gemini-3.6-flash"
-        ]
-      },
-      "writing": {
-        "model": "opencode/mimo-v2.5-free"
-      },
-      "artistry": {
-        "model": "opencode/nemotron-3.5-lightning-free"
-      },
-      "unspecified-low": {
-        "model": "opencode/ling-3.0-flash-fin-free"
-      },
-      "unspecified-high": {
-        "model": "opencode/nemotron-3-ultra-free",
-        "fallback": [
-          "google/gemini-3.6-flash",
-          "opencode/nemotron-3.5-lightning-free"
-        ]
-      }
-    },
-    "defaultFallback": [
-      "opencode/nemotron-3-ultra-free",
-      "google/gemini-3.6-flash",
-      "opencode/nemotron-3.5-lightning-free",
-      "opencode/mimo-v2.5-free",
-      "opencode/ling-3.0-flash-fin-free"
-    ]
+      "visual-engineering": { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "models": ["openrouter/inclusionai/ling-3.0-flash-vl:free"] },
+      "ultrabrain":         { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "models": ["openrouter/nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter/nex-agi/nex-n2.5-pro:free"] },
+      "deep":               { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "models": ["openrouter/nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter/nex-agi/nex-n2.5-pro:free"] },
+      "artistry":           { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "models": ["openrouter/nex-agi/nex-n2.5-mini:free"] },
+      "quick":              { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "models": ["openrouter/nvidia/nemotron-3.5-lightning:free"] },
+      "writing":            { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "models": ["openrouter/nex-agi/nex-n2.5-mini:free"] },
+      "unspecified-low":    { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "models": ["openrouter/nvidia/nemotron-3.5-lightning:free"] },
+      "unspecified-high":   { "model": "cloudflare-workers-ai/@cf/google/gemma-4-26b-a4b-it", "models": ["openrouter/nex-agi/nex-n2.5-pro:free"] }
+    }
   },
   "_migrations": [
     "2026-08-reasoning-unification"
